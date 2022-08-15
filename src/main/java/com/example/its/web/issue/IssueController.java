@@ -13,8 +13,8 @@ public class IssueController {
     private final IssueService issueService;
     //    GET /issues
     @GetMapping("/issues")
-    public String showList(Model model){
-        model.addAttribute("issueList",IssueService.findAll());
+    public String showList(Model model) {
+        model.addAttribute("issueList", issueService.findAll());
         return "issues/list";
     }
 }

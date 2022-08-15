@@ -7,6 +7,7 @@ import java.util.List;
 
 @Mapper
 public interface IssueRepository {
+
     @Select("select * from issues")
     List<IssueEntity> findAll();
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>トップページ | 課題管理アプリケーション</title>
+</head>
+<body>
+<h1>課題一覧</h1>
+<a href="../" th:href="@{/}">トップページ</a>
+<table>
+    <thead>
+        <tr th:each="issue : ${issueList}">
+            <th th:text="${issue.id}">#</th>
+            <th th:text="${issue.summary}">概要</th>
+        </tr>
+    </thead>
+    <tbody>
+        <th>(id)</th>
+        <td>(summary)</td>
+    </tbody>
+</table>
+</body>
+</html>

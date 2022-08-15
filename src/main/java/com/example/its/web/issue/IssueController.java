@@ -32,7 +32,7 @@ public class IssueController {
     @PostMapping
     public String create(IssueForm form,Model model){
         issueService.create(form.getSummary(),form.getDescription());
-        return showList(model); //TODO: リロードボタンの対策が必要
+        return "redirect:/issues"; //TODO: リロードボタンの対策が必要
     }
 }
 
